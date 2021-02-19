@@ -13,6 +13,11 @@ dev_dependencies:
   fair_compiler: ^0.2.0
 ```
 
+* fair ![https://pub.dev/packages/fair](https://img.shields.io/pub/v/fair.svg)
+* fair_compiler ![https://pub.dev/packages/fair_compiler](https://img.shields.io/pub/v/fair_compiler.svg)
+* fair_annotation ![https://pub.dev/packages/fair_annotation](https://img.shields.io/pub/v/fair_annotation.svg)
+* fair_version ![https://pub.dev/packages/fair_version](https://img.shields.io/pub/v/fair_version.svg)
+
 为了方便接入&体验Fair框架，请确认你的Flutter运行环境，Fair基于Flutter 1.20.4开发,目前已适配至1.22.x, **推荐使用v1.22.5体验**。
 
 后续将继续支持最新稳定版本。目前支持版本（如遇问题，Issue反馈）：
@@ -34,7 +39,7 @@ dependency_overrides:
   fair_version:
     git:
       url: https://github.com/wuba/fair.git
-      ref: master
+      ref: main
       path: fair_version/flutter_1_12_13
 ```
 

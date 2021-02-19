@@ -2,9 +2,11 @@
 
 <p align="center">
   <a href="https://pub.dev/packages/fair"><img src="https://img.shields.io/pub/v/fair.svg" alt="pub"></a>
-  <a href="https://github.com/wuba/fair"><img src="https://img.shields.io/badge/flutter-Android%7CiOS%7CWeb-blue.svg" alt="github"></a>
+  <a href="https://github.com/wuba/fair"><img src="https://img.shields.io/badge/platform-flutter-blue.svg" alt="github"></a>
   <a href="https://fair.58.com/"><img src="https://img.shields.io/badge/doc-fair.58.com-green.svg" alt="doc"></a>
   <a href="https://github.com/wuba/fair/LICENSE"><img src="https://img.shields.io/badge/license-BSD-green.svg" alt="license"></a>
+  <a href="https://github.com/wuba/fair/actions"><img src="https://github.com/wuba/fair/workflows/build/badge.svg" alt="build"></a>
+  <a href="https://gitter.im/flutter_fair/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/flutter_fair/community.svg" alt="Gitter"></a>
 </p>
 
 [简体中文](README.md)|[English](README-en.md)
@@ -24,6 +26,7 @@ Fair的UI渲染是无损的，可以做到像素级别的还原，看一张转�
 
 > 使用的工程来自 https://github.com/mitesh77/Best-Flutter-UI-Templates
 
+
 ## 🏛Architecture
 
 ![fair architecture](fair.png)
@@ -34,12 +37,14 @@ Fair的UI渲染是无损的，可以做到像素级别的还原，看一张转�
 
 后续将继续支持最新稳定版本。目前支持版本（如遇问题，Issue反馈）：
 
-| Flutter版本              | Dart版本    |
-| ------------------------ | ----------- |
-| Flutter 1.22.4/1.22.5    | Dart 2.10.4 |
-| Flutter 1.20.4           | Dart 2.9.2  |
-| Flutter 1.17.3           | Dart 2.8.4  |
-| Flutter 1.12.13+hotfix.9 | Dart 2.7.2  |
+| Flutter版本              | Dart版本    | CI |
+| ------------------------ | ----------- |----------- |
+| Flutter 1.22.4/1.22.5    | Dart 2.10.4 | ![v1.22.5](https://github.com/wuba/fair/workflows/build/badge.svg)|
+| Flutter 1.20.4           | Dart 2.9.2  | ![v1.20.4](https://github.com/wuba/fair/workflows/1_20_4/badge.svg)|
+| Flutter 1.17.3           | Dart 2.8.4  | ![v1.17.3](https://github.com/wuba/fair/workflows/1_17_3/badge.svg)|
+| Flutter 1.12.13+hotfix.9 | Dart 2.7.2  | ![v1.12.13](https://github.com/wuba/fair/workflows/1_12_13/badge.svg) |
+
+注意：由于部分版本flutter构建脚本存在巨大变化，会导致同一个模板工程无法同时运行在不同版本。
 
 > https://flutter.dev/docs/development/tools/sdk/releases?tab=macos
 
@@ -65,6 +70,11 @@ samples
 
 更多接入操作请参考 [https://fair.58.com/](https://fair.58.com/)
 
+* fair ![https://pub.dev/packages/fair](https://img.shields.io/pub/v/fair.svg)
+* fair_compiler ![https://pub.dev/packages/fair_compiler](https://img.shields.io/pub/v/fair_compiler.svg)
+* fair_annotation ![https://pub.dev/packages/fair_annotation](https://img.shields.io/pub/v/fair_annotation.svg)
+* fair_version ![https://pub.dev/packages/fair_version](https://img.shields.io/pub/v/fair_version.svg)
+
 ## 📎相关介绍
 * [Flutter动态化框架Fair文档上线&开源倒计时](https://juejin.cn/post/6901600898603024391)
 * [Flutter动态化框架Fair的设计与思考](https://juejin.cn/post/6896655572910014478)
@@ -78,9 +88,9 @@ samples
 	* Github开源 https://github.com/wuba/fair ✅
   * i18n ⚠️✅
 * Bug修复
-	* Github issue处理
+	* Github issue处理✅
 * 维护迭代 2021
-	* Framework适配优化
+	* Framework适配优化✅
 	* 局部刷新支持 ✅
 	* 状态库支持Provider
 	* 独立cli工具
@@ -89,8 +99,8 @@ samples
   * Flutter Favorite Package支持
   * 其他Top UI Package支持
   * 逻辑组件优化 ✅
-	* CI流程
-	* 社区插件贡献方式
+  * CI流程✅
+  * 社区插件贡献方式
 
 ## ⚠️Unsupported Features
 由于dart语法解析工作量奇大，逻辑运算均不支持，由逻辑运算延伸的表达式则更多。
@@ -102,6 +112,28 @@ samples
 
 ## 🔧Contributing
 通过[Issue](https://github.com/wuba/fair/issues)提交问题，贡献代码走Pull Request，管理员将对代码进行审核。
+
+对Fair感兴趣的小伙伴，可以加入交流群。技术咨询、讨论，请移步至[![Gitter](https://badges.gitter.im/flutter_fair/community.svg)](https://gitter.im/flutter_fair/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+| 微信                         | 美事（内部）                 |
+| ---------------------------- | ---------------------------- |
+| ![wechat](https://fair.58.com/assets/img/wechat.a8ffe3f0.png) | ![meishi](https://fair.58.com/assets/img/meishi.5a7cba60.jpg) |
+
+> 如微信码过期，可以找管理员(请务必备注flutter fair，否则不予通过)：do_not_let_me_know
+
+## 🧯FAQ
+
+* 为什么没有bin产物？
+
+bin为可选的flatbuffer产物，本机如果需要，请安装[flatc](http://google.github.io/flatbuffers/flatbuffers_guide_building.html)
+
+* 执行flutter pub run build_runner build后没有产物
+
+请根据适配要求，核查flutter，dart版本
+
+* 执行flutter pub run build_runner build后，提示编译错误信息
+
+根据错误日志，有几种情况：1.原代码中存在逻辑表达式，语法解析不通过，尝试剥离逻辑为module；2.`.dart_tool`文件权限问题，请删除后重试
 
 ## LICENSE
 Fair项目基于[BSD协议](LICENSE)开源。我们使用的更多依赖库详见pubspec.yaml

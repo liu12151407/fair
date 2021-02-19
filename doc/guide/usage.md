@@ -16,6 +16,11 @@ dev_dependencies:
   fair_compiler: ^0.2.0
 ```
 
+* fair ![https://pub.dev/packages/fair](https://img.shields.io/pub/v/fair.svg)
+* fair_compiler ![https://pub.dev/packages/fair_compiler](https://img.shields.io/pub/v/fair_compiler.svg)
+* fair_annotation ![https://pub.dev/packages/fair_annotation](https://img.shields.io/pub/v/fair_annotation.svg)
+* fair_version ![https://pub.dev/packages/fair_version](https://img.shields.io/pub/v/fair_version.svg)
+
 Please check the runtime environment on your computer. Fair is based on Flutter 1.20.4 & 1.22.4 .The latest stable flutter version will continue to be supported in the future. Currently supported versions are listed bellow (If you encounter problems, issue feedback):
 
 | Flutter Version          | Dart Version|
@@ -35,7 +40,7 @@ dependency_overrides:
   fair_version:
     git:
       url: https://github.com/wuba/fair.git
-      ref: master
+      ref: main
       path: fair_version/flutter_1_12_13
 ```
 
