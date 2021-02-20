@@ -2,6 +2,7 @@ import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 
 import 'delegate.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(FairApp(
@@ -21,13 +22,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: FairWidget(
-        name: 'home_page',
-        path: 'assets/bundle/lib_home_page.fair.json',
-        data: {
-          'title': 'Flutter Demo Home Page',
-        },
-      ) /*MyHomePage(title: 'Flutter Demo Home Page')*/,
+      home:
+          FairWidget(
+            name: 'home_page',
+            path: 'assets/bundle/lib_home_page.fair.json',
+            data: {
+              'title': 'Flutter Demo Home Page',
+            },
+          )
+          // MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
