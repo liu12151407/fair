@@ -2,7 +2,6 @@ import 'package:fair/fair.dart';
 import 'package:flutter/material.dart';
 
 import 'delegate.dart';
-import 'home_page.dart';
 
 void main() {
   runApp(FairApp(
